@@ -74,8 +74,8 @@ html {
 				<div id="usernameFeedback" class="text-center feedback"></div>
 				<br>
 				<div id="inputgroup2" class="input-group">
-					<span class="input-group-addon"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span></span>
-					<input type="password" placeholder="Password" class="form-control" id="password" name="password">
+					
+					<input type="hidden" placeholder="Password" class="form-control" id="password" name="password">
 				</div>
 				<div id="passwordFeedback" class="text-center feedback"></div>
 				<br>
@@ -119,12 +119,7 @@ $(document).ready(function() {
 			$("#usernameFeedback").text("Username is empty");
 		}
 		
-		if (password.length < 6) {
-			error = true;
-			$("#inputgroup2").addClass("has-error");
-			$("#passwordFeedback").show();
-			$("#passwordFeedback").html("Password must be at least 6 characters long");
-		}
+
 		
 		if (token.length != 6) {
 			error = true;
